@@ -3,6 +3,7 @@ import json from '@rollup/plugin-json';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import replace from '@rollup/plugin-replace';
+import { uglify } from "rollup-plugin-uglify";
 
 export default [
     {
@@ -18,7 +19,8 @@ export default [
             babel({
                 presets: ["@babel/preset-react"],
             }),
-            commonjs()
+            commonjs(),
+            uglify()
         ],
         output: {
             file: 'dist/script.js',
