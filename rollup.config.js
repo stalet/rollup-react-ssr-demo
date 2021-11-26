@@ -35,10 +35,6 @@ export default [
                 extensions: [".js",".jsx"],
             }),
             json(),
-            replace({
-                'process.env.NODE_ENV': JSON.stringify( 'development' ),
-                preventAssignment: true
-            }),
             babel({
                 presets: ["@babel/preset-react"],
             }),
