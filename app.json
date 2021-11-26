@@ -1,0 +1,7 @@
+{
+  "name": "rollup-react-ssr-demo",
+  "description": "Rollup react SSR demo app",
+  "repository": "://github.com/stalet/rollup-react-ssr-demo",
+  "keywords": ["node", "express", "heroku"],
+  "image": "heroku/nodejs"
+}
