@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import App from "./app";
 
 window.addEventListener('DOMContentLoaded', function () {
@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
     if (rootPanel) {
         console.log('Hydrating');
-        ReactDOM.hydrate(<App/>, rootPanel);
+        ReactDOM.hydrateRoot(rootPanel,<App/>);
         console.log('Hydrated');
     }
 });

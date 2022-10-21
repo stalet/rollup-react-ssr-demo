@@ -6,7 +6,10 @@
   "main": "index.js",
   "scripts": {
     "prebuild": "rimraf dist && mkdir dist",
-    "build": "rollup -c",
+    "build": "npm run build:js && npm run build:css && npm run build:icons",
+    "build:js": "rollup -c",
+    "build:icons": "cp client/icons/* dist",
+    "build:css": "tailwindcss -c ./tailwind.config.cjs -i ./client/style.css -o ./dist/output.css",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --es-module-specifier-resolution=node .",
     "start:dev": "npm run build && npm run start"
@@ -37,6 +40,7 @@
     "rollup-plugin-babel": "4.4.0",
     "rollup-plugin-livereload": "2.0.5",
     "rollup-plugin-serve": "2.0.1",
-    "rollup-plugin-uglify": "4.0.0"
+    "rollup-plugin-uglify": "4.0.0",
+    "tailwindcss": "3.2.0"
   }
 }

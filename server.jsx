@@ -11,8 +11,7 @@ export default async function startServer({ port = 5000} = {}) {
 
     app.get('/', (req, res, next) => {
         res.send(template(`
-            <h1>Hello world</h1>
-            <main id="root">${ReactDOMServer.renderToString(<App/>)}</main>
+            <div id="root">${ReactDOMServer.renderToString(<App/>)}</div>
         `));
     });
 
