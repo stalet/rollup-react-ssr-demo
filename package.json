@@ -27,7 +27,7 @@
     "serve-static": "^1.14.1"
   },
   "devDependencies": {
-    "@babel/core": "7.22.17",
+    "@babel/core": "7.22.19",
     "@babel/preset-env": "7.22.15",
     "@babel/preset-react": "7.22.15",
     "@rollup/plugin-babel": "6.0.3",
